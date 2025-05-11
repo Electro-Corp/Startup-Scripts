@@ -28,5 +28,8 @@ directory = Path.home()
 largest_folder, largest_size = find_largest_folder(directory)
 
 if largest_folder:
+  if largest_size / (1024 * 1024) > 1024:
+    print(f"[INFO] Largest Folder is {largest_folder} at {largest_size / (1024 * 1024 * 1024):.2f} GB")
+  else:
     print(f"[INFO] Largest folder is {largest_folder} at {largest_size / (1024 * 1024):.2f} MB")
 
