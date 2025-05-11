@@ -10,10 +10,9 @@ def git(f):
         waa = result.split(b" ")
         if b"behind" in waa:
           print(f"[INFO] {f} can be updated.")
-         #print(f"{f} is up to date.")
     except subprocess.CalledProcessError as e:
+        # whatever 
         pass
-        #print(f"{f} is not a valid Git repository or an error occurred: {e.output.decode()}")
 
 for f in os.listdir(Path.home()):
     path = os.path.join(Path.home(), f)
