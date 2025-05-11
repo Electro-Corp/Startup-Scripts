@@ -9,7 +9,7 @@ def git(f):
         result.strip(b'\n')
         waa = result.split(b" ")
         if b"behind" in waa:
-          print(f"{f} can be updated.")
+          print(f"[INFO] {f} can be updated.")
          #print(f"{f} is up to date.")
     except subprocess.CalledProcessError as e:
         pass
